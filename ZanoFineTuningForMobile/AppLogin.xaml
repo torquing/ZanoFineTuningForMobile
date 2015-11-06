@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zanoFineTuningForMobile="clr-namespace:ZanoFineTuningForMobile;assembly=ZanoFineTuningForMobile.Droid"
+             x:Class="ZanoFineTuningForMobile.AppLogin">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="Z-Button" TargetType="Button">
+        <Setter Property="BorderColor" Value="#fab800"/>
+        <Setter Property="BorderWidth" Value="2"></Setter>
+        <Setter Property="BorderRadius" Value="2"/>
+        <Setter Property="HeightRequest" Value="48"/>
+        <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+        <Setter Property="TextColor"  Value="#fab800"></Setter>
+      </Style>
+      <Style x:Key="Z-Entry" TargetType="Entry">
+        <Setter Property="HeightRequest" Value="48"/>
+        <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+        <Setter Property="TextColor"  Value="#ffffff"></Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+      <Label x:Name="Greeting" Text="Welcome Back!" />
+      <zanoFineTuningForMobile:ZEntry x:Name="User" Style="{DynamicResource Z-Entry}"/>
+      <zanoFineTuningForMobile:ZEntry x:Name="Password" />
+      <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+        <Button x:Name="Logout" Text="LOGOUT" Style="{DynamicResource Z-Button}"/>
+        <Button x:Name="LoginOrContinue" Text="LOGIN" Style="{DynamicResource Z-Button}"/>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
